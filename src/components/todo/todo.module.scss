@@ -46,7 +46,7 @@
     background: none;
     cursor: pointer;
     font-size: 24px;
-    background-image: url("../../images/close-outline.svg");
+    background-image: url("../../assets/img/close-outline.svg");
   }
 }
 
@@ -67,13 +67,59 @@
   justify-content: space-between;
   color: white;
   border: 1px solid white;
-  cursor: pointer;
 
   .itemText {
     width: 100%;
     text-align: left;
     padding-left: 15px;
     font-size: 20px;
+  }
+}
+
+.dNone {
+  display: none;
+}
+
+.edit {
+  position: absolute;
+  width: 65%;
+  left: 0;
+
+  .editTitle {
+    position: absolute;
+    border: 0;
+    height: 40px;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 20px;
+    left: 0;
+    margin-left: 10px;
+    padding-left: 10px;
+    margin-top: 15px;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .editInputBtns {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 16px;
+    right: 0;
+    opacity: 0.6;
+    cursor: pointer;
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .apply {
+    right: 40px;
+    background-image: url("../../assets/img/chevron-down-circle-outline.svg");
+  }
+  .cancel {
+    background-image: url("../../assets/img/close-circle-outline.svg");
   }
 }
 
@@ -84,18 +130,42 @@
   }
 }
 
+.btnContainer {
+  display: flex;
+  flex-direction: row;
+  width: 300px;
+}
+
 .button {
-  width: 100px;
+  width: 100px !important;
   height: 100px;
-  background: none;
   border: none;
-  border-left: 1px solid white;
   border: 1px solid white;
   color: white;
   background-color: rgb(33, 175, 241);
   font-size: 20px;
   cursor: pointer;
+
   &:hover {
     opacity: 0.8;
+  }
+}
+
+.btns {
+  display: flex;
+  flex-direction: column;
+}
+
+.editBtns {
+  background: none;
+  border: none;
+  width: 120px;
+  height: 50px;
+  border: 1px solid white;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  &:hover {
+    background-color: rgb(33, 175, 241);
   }
 }
